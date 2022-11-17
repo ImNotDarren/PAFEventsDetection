@@ -62,3 +62,5 @@ patients) and 14 non-AF patients.
 
 The project proposal is shown [here](/documents/proposal.md).
 
+## <a name="link-part-7">How to run</a>
+
