@@ -25,5 +25,4 @@ The model is a 1D convolutional neural network with a masking layer (filling 0 f
 three fully connected dense layers, and will classify if the patient is experiencing
 AF every second (200 samples).
 
-It scored 0.968 on accuracy on the validation dataset.
-
+It scored 0.912 on accuracy on the validation dataset.
