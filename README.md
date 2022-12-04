@@ -46,9 +46,21 @@ patients) and 14 non-AF patients.
 
 **Models:**
 
+A 1D Convolutional Recurrent Neural Network model is used to solve this problem. It
+takes 8 heartbeats (1500 samples) as input, and output the possibility of the last
+heartbeat is experiencing atrial fibrillation.
+
 **Model Evaluation and Selection:**
 
+The data was split into 80/20 train vs. holdout. All scores reported was proceeded on
+validaton and test set. In the original challenge, it allows the algorthm to predict
+AF two heartbeat earlier and two heartbeat later. However in this case, there isn't
+any tolerance.
+
 **Final scores:**
+
+- Accuracy on validation set: 0.953
+- Loss on validation set: 0.193
 
 ## <a name="link-part-5">Tools</a>
 
@@ -56,7 +68,7 @@ patients) and 14 non-AF patients.
 * **Python waveform-database package** for reading the data
 * **Matplotlib** and **Seaborn** for plotting.
 * **Scikit Learn** and **Tensorflow** for modeling.
-* **Pickle** for saving models in a pickle file.
+* **Pickle** for saving data in a pickle file.
 
 ## <a name="link-part-6">Communication</a>
 
