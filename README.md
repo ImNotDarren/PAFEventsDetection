@@ -57,7 +57,7 @@ takes 8 heartbeats (1500 samples) as input, and output the _possibility of the l
 heartbeat experiencing atrial fibrillation (AF) and the possibility of it not
 experiencing AF.
 
-<img src="./imgs/CRNN.png" style="width: 100px;"/>
+<img src="./imgs/CRNN.png" style="width: 200px;"/>
 
 **Model Evaluation and Selection:**
 
