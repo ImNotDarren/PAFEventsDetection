@@ -7,7 +7,6 @@
 - [Algorithm](#link-part-4)
 - [Tools](#link-part-5)
 - [Communication](#link-part-6)
-- [**How to run**](#link-part-7)
 
 ## <a name="link-part-1">Abstract</a>
 
@@ -20,7 +19,10 @@ episodes in dynamic ECG regords.
 ## <a name="link-part-2">Design</a>
 
 This project comes from the [The 4th China Physiological Signal Challenge]([https://physionet.org/content/challenge-2019/1.0.0/](https://physionet.org/content/cpsc2021/1.0.0/))
-in 2021.
+in 2021. The data is sourced from 12-lead Holter or 3-lead wearable ECG monitoring
+devices. Early detection of paroxysmal atrial fibrillation (PAF) events is particularly
+important, which is of great value for AF surgery options, drug intervention and
+the diagnosis and treatment of various clinical complications.
 
 ## <a name="link-part-3">Data</a>
 
@@ -44,6 +46,10 @@ patients) and 14 non-AF patients.
 
 **Data Cleaning:**
 
+- select record name, signals, fs, beat locations, af start scripts, af end scripts
+and class true features and saved them into a list of dictionaries
+- Filter the signals and get all r-peaks of the ecg records using Biosppy
+
 **Models:**
 
 A 1D Convolutional Recurrent Neural Network model is used to solve this problem. It
@@ -53,11 +59,13 @@ heartbeat is experiencing atrial fibrillation.
 **Model Evaluation and Selection:**
 
 The data was split into 80/20 train vs. holdout. All scores reported was proceeded on
-validaton and test set. In the original challenge, it allows the algorthm to predict
-AF two heartbeat earlier and two heartbeat later. However in this case, there isn't
+validation and test set. In the original challenge, it allows the algorithm to predict
+AF two heartbeat earlier and two heartbeat later. However, in this case, there isn't
 any tolerance.
 
-**Final scores:**
+
+
+**Final scores:***
 
 - Accuracy on validation set: 0.953
 - Loss on validation set: 0.193
@@ -66,13 +74,12 @@ any tolerance.
 
 * **Pandas** for exploratory data analysis.
 * **Python waveform-database package** for reading the data
-* **Matplotlib** and **Seaborn** for plotting.
-* **Scikit Learn** and **Tensorflow** for modeling.
+* **Biosppy** for ecg processing.
+* **Tensorflow** for modeling.
 * **Pickle** for saving data in a pickle file.
 
 ## <a name="link-part-6">Communication</a>
 
 The project proposal is shown [here](/documents/proposal.md).
 
-## <a name="link-part-7">How to run</a>
-
+The MVP document is shown [here](/documents/MVP.md).

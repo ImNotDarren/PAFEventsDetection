@@ -55,7 +55,7 @@ class CNN:
         for i, t in enumerate(train):
             print(str(i + 1) + '/' + str(len(train)), end='\r')
             rpeaks = t['rpeaks']
-            # from the twelfth peak
+            # from the eighth peak
             for p in range(9, len(rpeaks)):
                 end = rpeaks[p]
                 start = end - 1499
