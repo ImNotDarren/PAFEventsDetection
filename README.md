@@ -53,11 +53,13 @@ and class true features and saved them into a list of dictionaries
 **Model:**
 
 A 1D Convolutional Recurrent Neural Network model is used to solve this problem. It
-takes 8 heartbeats (1500 samples) as input, and output the _possibility of the last
+takes 8 heartbeats (1500 samples) as input, and output the possibility of the last
 heartbeat experiencing atrial fibrillation (AF) and the possibility of it not
 experiencing AF.
 
-<img src="./imgs/CRNN.png" style="width: 250px;" div align=center />
+<div align=center >
+    <img src="./imgs/CRNN.png" style="width: 250px;" />
+</div>
 
 **Model Evaluation and Selection:**
 
