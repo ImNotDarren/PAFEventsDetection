@@ -18,7 +18,7 @@ episodes in dynamic ECG regords.
 
 ## <a name="link-part-2">Design</a>
 
-This project comes from the [The 4th China Physiological Signal Challenge]([https://physionet.org/content/challenge-2019/1.0.0/](https://physionet.org/content/cpsc2021/1.0.0/))
+This project comes from the [The 4th China Physiological Signal Challenge](https://physionet.org/content/cpsc2021/1.0.0/)
 in 2021. The data is sourced from 12-lead Holter or 3-lead wearable ECG monitoring
 devices. Early detection of paroxysmal atrial fibrillation (PAF) events is particularly
 important, which is of great value for AF surgery options, drug intervention and
