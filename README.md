@@ -50,14 +50,14 @@ patients) and 14 non-AF patients.
 and class true features and saved them into a list of dictionaries
 - Filter the signals and get all r-peaks of the ecg records using Biosppy
 
-**Models:**
+**Model:**
 
 A 1D Convolutional Recurrent Neural Network model is used to solve this problem. It
 takes 8 heartbeats (1500 samples) as input, and output the _possibility of the last
 heartbeat experiencing atrial fibrillation (AF) and the possibility of it not
 experiencing AF.
 
-<img src="./imgs/CRNN.png" style="width: 200px;"/>
+<img src="./imgs/CRNN.png" style="width: 250px;"/>
 
 **Model Evaluation and Selection:**
 
@@ -65,8 +65,6 @@ The data was split into 80/20 train vs. holdout. All scores reported was proceed
 validation and test set. In the original challenge, it allows the algorithm to predict
 AF two heartbeat earlier and two heartbeat later. However, in this case, there isn't
 any tolerance.
-
-
 
 **Final scores:***
 
