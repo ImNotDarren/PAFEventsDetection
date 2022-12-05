@@ -68,7 +68,7 @@ validation and test set. In the original challenge, it allows the algorithm to p
 AF two heartbeat earlier and two heartbeat later. However, in this case, there isn't
 any tolerance.
 
-**Final scores:***
+**Final scores:**
 
 - Accuracy on validation set: 0.953
 - Loss on validation set: 0.193
