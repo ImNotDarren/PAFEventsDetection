@@ -63,15 +63,20 @@ experiencing AF.
 
 **Model Evaluation and Selection:**
 
-The data was split into 80/20 train vs. holdout. All scores reported was proceeded on
-validation and test set. In the original challenge, it allows the algorithm to predict
-AF two heartbeat earlier and two heartbeat later. However, in this case, there isn't
-any tolerance.
+The data was split into 80/20 train vs. holdout (Considering my laptop's performance,
+I  only used 1/4 of the training set which is 250 recordings to train the model). All
+scores reported was proceeded on validation and test set. In the original challenge,
+it allows the algorithm to predict AF two heartbeat earlier and two heartbeat later.
+However, in this case, there isn't any tolerance.
 
 **Final scores:**
 
 - Accuracy on validation set: 0.953
 - Loss on validation set: 0.193
+
+
+- Accuracy on test set: 0.953
+- Loss on test set: 0.128
 
 ## <a name="link-part-5">Tools</a>
 

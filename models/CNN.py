@@ -29,6 +29,13 @@ class CNN:
             )
         ]
 
+    def load_weights(self, weight_path):
+        # with open(model_path, 'r') as file:
+        #     model_json = file.read()
+        # self.model = model_from_json(model_json)
+        self.model.load_weights(weight_path)
+
+
     # build cnn
     def build_model(self):
         self.model.add(InputLayer(input_shape=(1500, 2)))
@@ -51,7 +58,7 @@ class CNN:
         Xs = []
         ys = []
         # get X and y
-        # scan the first five heartbeats to predict the fifth
+        # scan the first eight heartbeats to predict the eighth
         for i, t in enumerate(train):
             print(str(i + 1) + '/' + str(len(train)), end='\r')
             rpeaks = t['rpeaks']
@@ -112,4 +119,11 @@ class CNN:
                        callbacks=self.callbacks)
 
     def score(self, test):
-        pass
+        self.model.compile(loss='categorical_crossentropy',
+                           optimizer='adam',
+                           metrics=['accuracy'])
+        self.model.load_weights('cnn_model.h5')
+        # get test X and y
+        Xs, ys = self.get_train(test)
+        evaluation = self.model.evaluate(Xs, to_categorical(ys, 2), batch_size=20, verbose=1, return_dict=True)
+        print(evaluation)
