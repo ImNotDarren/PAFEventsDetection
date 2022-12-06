@@ -65,7 +65,7 @@ experiencing AF.
 
 The data was split into 80/20 train vs. holdout (Considering my laptop's performance,
 I  only used 1/4 of the training set which is 250 recordings to train the model). All
-scores reported was proceeded on validation and test set. In the original challenge,
+scores reported was evaluated on validation and test set. In the original challenge,
 it allows the algorithm to predict AF two heartbeat earlier and two heartbeat later.
 However, in this case, there isn't any tolerance.
 
