@@ -14,7 +14,7 @@ Atrial fibrillation (AF) is the most frequent arrhythmia, but paroxysmal atrial
 fibrillation (PAF) often remains unrecognized. Previous AF detection algorithms
 usually focus on the classification of AF rhythm instead of locating the onsets
 and ends of AF episodes. My goal is to develop an algorithm that search the AF
-episodes in dynamic ECG regords.
+episodes in dynamic ECG records.
 
 ## <a name="link-part-2">Design</a>
 
@@ -37,7 +37,7 @@ of the long-term dynamic ECGs, each sampled at 200 Hz.
 
 The training set in the 1st stage consists of 730 records, extracted from the Holter
 records from 12 AF patients (5PAF patients) and 42 non-AF patients (usually including
-other abnoremal and normal rhythms).
+other abnormal and normal rhythms).
 
 The training set in the 2nd stage consists of 706 records from 37 AF patients (18 PAF
 patients) and 14 non-AF patients.
@@ -46,8 +46,8 @@ patients) and 14 non-AF patients.
 
 **Data Cleaning:**
 
-- select record name, signals, fs, beat locations, af start scripts, af end scripts
-and class true features and saved them into a list of dictionaries
+- Select record name, signals, fs, beat locations, af start scripts, af end scripts
+and class true features and save them into a list of dictionaries
 - Filter the signals and get all r-peaks of the ecg records using Biosppy
 
 **Model:**
@@ -80,7 +80,6 @@ However, in this case, there isn't any tolerance.
 
 ## <a name="link-part-5">Tools</a>
 
-* **Pandas** for exploratory data analysis.
 * **Python waveform-database package** for reading the data
 * **Biosppy** for ecg processing.
 * **Tensorflow** for modeling.
